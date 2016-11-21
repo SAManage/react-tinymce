@@ -126,11 +126,20 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  componentWillReceiveProps: function componentWillReceiveProps(nextProps) {
-	    if (!(0, _lodashLangIsEqual2['default'])(this.props.config, nextProps.config)) {
-	      this._init(nextProps.config, nextProps.content);
-	    }
 	    if (!(0, _lodashLangIsEqual2['default'])(this.props.id, nextProps.id)) {
 	      this.id = nextProps.id;
+	    }
+	    if (!(0, _lodashLangIsEqual2['default'])(this.props.config, nextProps.config) || !(0, _lodashLangIsEqual2['default'])(this.props.id, nextProps.id)) {
+	      this._init((0, _lodashLangClone2['default'])(nextProps.config), nextProps.content);
+	      return;
+	    }
+	
+	    var editor = tinymce.EditorManager.get(this.id);
+	    if (!(0, _lodashLangIsEqual2['default'])(editor.getContent({ format: 'raw' }), nextProps.content)) {
+	      editor.setContent(nextProps.content);
+	
+	      editor.selection.select(editor.getBody(), true);
+	      editor.selection.collapse(false);
 	    }
 	  },
 	
