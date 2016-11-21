@@ -2,7 +2,7 @@
   "name": "react-tinymce",
   "version": "0.5.2",
   "description": "React TinyMCE component",
-  "main": "build/main.js",
+  "main": "build/lib/main.js",
   "scripts": {
     "test": "node_modules/.bin/rackt test --single-run --browsers Firefox",
     "start": "node_modules/.bin/rackt server"
