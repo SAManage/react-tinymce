@@ -135,7 +135,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	
 	    var editor = tinymce.EditorManager.get(this.id);
-	    if (!(0, _lodashLangIsEqual2['default'])(editor.getContent({ format: 'html' }), nextProps.content)) {
+	    if (editor && editor.serializer && !(0, _lodashLangIsEqual2['default'])(editor.getContent({ format: 'html' }), nextProps.content)) {
 	      editor.setContent(nextProps.content);
 	
 	      editor.selection.select(editor.getBody(), true);
