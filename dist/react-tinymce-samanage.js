@@ -129,7 +129,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (!(0, _lodashLangIsEqual2['default'])(this.props.id, nextProps.id)) {
 	      this.id = nextProps.id;
 	    }
-	    if (!(0, _lodashLangIsEqual2['default'])(this.props.config, nextProps.config) || !(0, _lodashLangIsEqual2['default'])(this.props.id, nextProps.id)) {
+	    if (!(0, _lodashLangIsEqual2['default'])(this.props.id, nextProps.id)) {
 	      this._init((0, _lodashLangClone2['default'])(nextProps.config), nextProps.content);
 	      return;
 	    }
