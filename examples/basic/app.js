@@ -17,18 +17,16 @@ const STYLES = {
   }
 };
 
-const App = React.createClass({
-  getInitialState() {
-    return {
-      content: '<p><strong>Welcome to react-tinymce</strong></p>'
-    };
-  },
+class App extends React.Component {
+  state = {
+    content: '<p><strong>Welcome to react-tinymce</strong></p>'
+  };
 
-  handleEditorChange(e) {
+  handleEditorChange = (e) => {
     this.setState({
       content: e.target.getContent()
     });
-  },
+  };
 
   render() {
     return (
@@ -44,6 +42,6 @@ const App = React.createClass({
       </div>
     );
   }
-});
+}
 
 ReactDOM.render(<App/>, document.getElementById('example'));
