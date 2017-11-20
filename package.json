@@ -1,6 +1,6 @@
 {
   "name": "react-tinymce-samanage",
-  "version": "0.5.8",
+  "version": "0.5.9",
   "description": "React TinyMCE component",
   "main": "lib/main.js",
   "scripts": {
@@ -24,11 +24,20 @@
     "react-dom": "^0.14.0 || ^15.0.0"
   },
   "devDependencies": {
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "rackt-cli": "^0.5.3",
     "react": "^15.0.0",
     "react-dom": "^15.0.0"
   },
   "dependencies": {
-    "lodash": "^3.9.3"
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "install": "^0.10.2",
+    "lodash": "^3.9.3",
+    "npm": "^5.5.1"
   }
 }

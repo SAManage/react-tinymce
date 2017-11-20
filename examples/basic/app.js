@@ -18,9 +18,7 @@ const STYLES = {
 };
 
 class App extends React.Component {
-  state = {
-    content: '<p><strong>Welcome to react-tinymce</strong></p>'
-  };
+
 
   handleEditorChange = (e) => {
     this.setState({
@@ -42,6 +40,9 @@ class App extends React.Component {
       </div>
     );
   }
+  state = {
+    content: '<p><strong>Welcome to react-tinymce</strong></p>'
+  };
 }
 
 ReactDOM.render(<App/>, document.getElementById('example'));
